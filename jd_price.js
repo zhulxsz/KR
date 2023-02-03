@@ -50,7 +50,7 @@ const JD_API_HOST = 'https://api.m.jd.com/';
       $.token = '';
       message = '';
       $.tryCount = 0;
-      await TotalBean();
+      //await TotalBean();
       console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
       if (!$.isLogin) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
@@ -196,7 +196,7 @@ async function jstoken() {
   };
   const dom = new JSDOM(`<body>
   <script src="https:////static.360buyimg.com/siteppStatic/script/mescroll/map.js"></script>
-  <script src="https://storage.360buyimg.com/webcontainer/js_security_v3.js"></script>
+  <script src="https://storage.360buyimg.com/webcontainer/js_security_v3_0.1.0.js"></script>
   <script src="https://static.360buyimg.com/siteppStatic/script/utils.js"></script>
   <script src="https://js-nocaptcha.jd.com/statics/js/main.min.js"></script>
   </body>`, options);

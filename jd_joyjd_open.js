@@ -56,7 +56,7 @@ if ($.isNode()) {
     }
     if (!activityIDList) {
         $.log(`没有通用ID任务，尝试获取远程`);
-        let data = await getData("https://gitee.com/KingRan521/JD-Scripts/raw/master/shareCodes/joyjd_open.json")
+        let data = await getData("https://cdn.jsdelivr.net/gh/KingRan/shareCodes@master/joyjd_open.json")
         if (data.activityIDList && data.activityIDList.length) {
             $.log(`获取到远程且有数据`);
             activityIDList = data.activityIDList.join('@')
@@ -76,7 +76,7 @@ if ($.isNode()) {
         $.oldcookie = cookiesArr[i];
         $.isLogin = true;
         $.nickName = '';
-        await TotalBean();
+        //await TotalBean();
         $.UserName = decodeURIComponent($.cookie.match(/pt_pin=([^; ]+)(?=;?)/) && $.cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
         console.log(`\n*****开始【京东账号${$.index}】${$.nickName || $.UserName}*****\n`);
         if (!$.isLogin) {

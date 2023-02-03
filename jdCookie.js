@@ -97,4 +97,7 @@ let nameConfig = process.env.ShareCodeConfigName
 let envName = process.env.ShareCodeEnvName
 if (nameChinese && nameConfig && envName) {
   SetShareCodesEnv(nameChinese, nameConfig, envName)
+} else {
+    console.debug(`KingRan 频道通知：https://t.me/KingRan521\n`)
+		console.debug(`云服务器IP须知：域名前缀为 'lzdz' 的禁用勿跑容易黑号\n`)
 }
